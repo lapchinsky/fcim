@@ -10,27 +10,27 @@
 }
 
 .dark {
-	background-color: var(--basic);
+	background-color: var(--light-blue);
 }
 
 .dark svg * {
-	fill: var(--white);
+	fill: var(--gold);
 }
 
 .dark:hover {
-	background-color: var(--basic);
+	background-color: var(--dark-blue);
 }
 
 .white {
-	background-color: var(--white);
+	background-color: var(--basic);
 }
 
 .white svg * {
-	fill: var(--basic);
+	fill: white;
 }
 
 .white:hover {
-	background-color: var(--basic);
+	background-color: var(--light-blue);
 }
 
 .white:hover svg * {

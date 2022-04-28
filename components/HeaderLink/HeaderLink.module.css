@@ -1,0 +1,14 @@
+.link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   width: 10vw;
+   height: 50px;
+}
+
+.link:hover {
+   font-weight: 400;
+   color: var(--light-blue);
+   border-color: var(--light-blue);
+}

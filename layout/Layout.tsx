@@ -4,6 +4,7 @@ import {Header} from "./Header/Header";
 import {FunctionComponent, useState, KeyboardEvent, useRef} from "react";
 import {Up} from "../components";
 import cn from "classnames";
+import { Footer } from "./Footer/Footer";
 
 const Layout = ({children}: LayoutProps): JSX.Element => {
     const bodyRef = useRef<HTMLDivElement>(null);
@@ -29,7 +30,6 @@ const Layout = ({children}: LayoutProps): JSX.Element => {
                 onKeyDown={skipContentAction}
             >К содержанию</a>
             <Header className={styles.header}/>
-            <Sidebar className={styles.sidebar}/>
             <div className={styles.body} ref={bodyRef} tabIndex={0}>
                 {children}
             </div>
@@ -39,7 +39,7 @@ const Layout = ({children}: LayoutProps): JSX.Element => {
     );
 };
 
-export const withLayout = <T extends Record<string, unknown> & IAppContext>(Component: FunctionComponent<T>) => {
+export const withLayout = <T extends Record<string, unknown>>(Component: FunctionComponent<T>) => {
     return function withLayoutComponent(props: T): JSX.Element {
         return (
                 <Layout>

@@ -1,6 +1,7 @@
 import { Button } from "../components";
+import {withLayout} from "../layout/Layout";
 
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
   return (
     <div>
       INTER MILANO
@@ -8,3 +9,5 @@ export default function Home(): JSX.Element {
     </div>
   );
 };
+
+export default withLayout(Home);
